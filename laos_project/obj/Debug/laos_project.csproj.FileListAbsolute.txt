@@ -1,0 +1,5 @@
+C:\Users\strik_000\Documents\Visual Studio 2010\Projects\laos_project\laos_project\bin\laos_project.dll
+C:\Users\strik_000\Documents\Visual Studio 2010\Projects\laos_project\laos_project\bin\laos_project.pdb
+C:\Users\strik_000\Documents\Visual Studio 2010\Projects\laos_project\laos_project\obj\Debug\laos_project.dll
+C:\Users\strik_000\Documents\Visual Studio 2010\Projects\laos_project\laos_project\obj\Debug\laos_project.pdb
+C:\Users\strik_000\documents\visual studio 2010\Projects\laos_project\laos_project\obj\Debug\laos_project.csprojResolveAssemblyReference.cache
