@@ -104,6 +104,8 @@
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="fn_class\charector.cs" />
+    <Compile Include="fn_class\cutword.cs" />
     <Compile Include="home.Master.cs">
       <DependentUpon>home.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

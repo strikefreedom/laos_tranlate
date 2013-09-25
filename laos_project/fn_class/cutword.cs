@@ -2,207 +2,67 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Collections;
 
-namespace laos_project
+namespace laos_project.fn_class
 {
-    public partial class _in : System.Web.UI.Page
+    public class cutword
     {
-        private string[] laosChar = new string[34];
-        private string[] charFirst = new string[34];
-        private string[] charLast = new string[34];
-        private string[] carSound = new string[34];
+        private static string[] laosChar = new string[34];
+        private static string[] charFirst = new string[34];
+        private static string[] charLast = new string[34];
+        private static string[] carSound = new string[34];
 
-        private string[] vowel = new string[41];
-        private string[] voSat = new string[41];
-        private string[] voSound = new string[41];
-        private string check = null;
-        private string st_out = "";
-        protected void Page_Load(object sender, EventArgs e)
+        private static string[] vowel = new string[41];
+        private static string[] voSat = new string[41];
+        private static string[] voSound = new string[41];
+
+        private static string[] x0 = new string[4];
+
+        static string first;
+        static int index=0;
+        public static ArrayList main(string input)
         {
             inputdatachar();
             inputdatavol();
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-
-            ArrayList word = fn_class.cutword.main(input.InnerText);
-            //st_out = "";
-            //output.InnerText = "";
-            //check1();
-            //output.InnerText = st_out;
-        }
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        private void check1()
-        {
-            string recive = "";
-            string input = this.input.InnerText;
-            for (int i = 0; i < this.input.InnerText.ToString().Length; i++)
+            first = input;
+            ArrayList ret = new ArrayList();
+            while (true)
             {
-                try { recive = this.input.InnerText.ToString().Substring(i,1); }
-                catch { recive = this.input.InnerText.ToString().Substring(i); }
-                if (recive == " ") st_out += " ";
-                if (recive == ".") st_out += ".";
-                if (recive == ",") st_out += ",";
-                // ------------------------------------------------------loop all input
-                for (int j = 0; j < 34; j++)
-                {                       //----------- loop char
-                    if (recive == laosChar[j])
-                    {
-                        st_out += charFirst[j];
-                    }
-                }
-
-                if (check != null)
-                {   // --------------- ตรวจสอบสระตัวข้างหน้า
-                    st_out += check;
-                    check = null;
-                }
-
-                // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ສຮະ ເ >>>>>>>>>>>>>>>>>>>>>>>
-                for (int j = 0; j < 41; j++)
-                {
-                    if (recive == vowel[j])
-                    {
-
-                        if (recive == vowel[36])
-                        {
-                            if (recive == vowel[0])
-                            {
-
-                            }
-                            else
-                            {
-                                check = voSat[36];
-                            }
-                        }
-
-                    }
-                }
-                // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ສຮະ ໂ >>>>>>>>>>>>>>>>>>>>>>>
-                for (int j = 0; j < 41; j++)
-                {
-                    if (recive == vowel[j])
-                    {
-
-                        if (recive == vowel[30])
-                        {
-                            if (recive == vowel[0])
-                            {
-
-                            }
-                            else
-                            {
-                                check = voSat[30];
-                            }
-                        }
-
-                    }
-                }
-                // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ສຮະ ແ >>>>>>>>>>>>>>>>>>>>>>>
-                for (int j = 0; j < 41; j++)
-                {
-                    if (recive == vowel[j])
-                    {
-
-                        if (recive == vowel[29])
-                        {
-                            if (recive == vowel[0])
-                            {
-
-                            }
-                            else
-                            {
-                                check = voSat[29];
-                            }
-                        }
-
-                    }
-                }
-                // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ສຮະ ໃ>>>>>>>>>>>>>>>>>>>>>>>
-                for (int j = 0; j < 41; j++)
-                {
-                    if (recive == vowel[j])
-                    {
-
-                        if (recive == vowel[20])
-                        {
-                            if (recive == vowel[0])
-                            {
-
-                            }
-                            else
-                            {
-                                check = voSat[20];
-                            }
-                        }
-
-                    }
-                }
-                // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ສຮະ ໄ >>>>>>>>>>>>>>>>>>>>>>>
-                for (int j = 0; j < 41; j++)
-                {
-                    if (recive == vowel[j])
-                    {
-
-                        if (recive == vowel[19])
-                        {
-                            if (recive == vowel[0])
-                            {
-
-                            }
-                            else
-                            {
-                                check = voSat[19];
-                            }
-                        }
-
-                    }
-                }
-
-                // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> all >>>>>>>>>>>>>>>>>>>>>>>
-                for (int j = 0; j < 41; j++)
-                {
-                    if ((recive) == vowel[j])
-                    {
-                        if (check == null)
-                        {
-                            st_out += voSat[j];
-                        }
-                    }
-                }
-                // ----------------------------------------------------
+                if (!first.Equals("")) ret.Add(cut());
+                else break;
             }
+            return ret;
         }
-        private void inputdatachar()
+        private static ArrayList cut()
+        {
+            index = 0;
+            ArrayList ret = new ArrayList();
+            
+            try
+            {
+                first = first.Substring(index);
+            }
+            catch
+            {
+                first = "";
+            }
+            return ret;
+        }
+        private static bool checkchar(string str)
+        {
+            bool ret = false;
+            for (int i = 0; i < 34; i++)
+            {
+                if (str.Equals(laosChar[i])) ret = true;
+            }
+            return ret;
+        }
+
+
+
+
+        private static void inputdatachar()
         {
             laosChar[0] = "ກ"; charFirst[0] = "k"; charLast[0] = "k"; carSound[0] = "2";
             laosChar[1] = "ຂ"; charFirst[1] = "kh"; charLast[1] = "k"; carSound[1] = "3";
@@ -240,7 +100,7 @@ namespace laos_project
             laosChar[33] = "ຫຣ"; charFirst[33] = "r"; charLast[33] = ""; carSound[33] = "1";
 
         }
-        private void inputdatavol()
+        private static void inputdatavol()
         {
             vowel[0] = "ະ"; voSat[0] = "a"; voSound[0] = "1";
             vowel[1] = "ັ"; voSat[1] = "a"; voSound[1] = "1";
