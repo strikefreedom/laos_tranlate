@@ -11,7 +11,7 @@ namespace laos_project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string xx = "";
         }
     }
 }
