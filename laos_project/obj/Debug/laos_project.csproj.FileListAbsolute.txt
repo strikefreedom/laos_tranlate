@@ -13,3 +13,8 @@ D:\Projects\laos_tranlate\laos_project\bin\laos_project.pdb
 D:\Projects\laos_tranlate\laos_project\obj\Debug\laos_project.csprojResolveAssemblyReference.cache
 D:\Projects\laos_tranlate\laos_project\obj\Debug\laos_project.dll
 D:\Projects\laos_tranlate\laos_project\obj\Debug\laos_project.pdb
+E:\laos_tranlate\laos_project\bin\laos_project.dll
+E:\laos_tranlate\laos_project\bin\laos_project.pdb
+E:\laos_tranlate\laos_project\obj\Debug\laos_project.csprojResolveAssemblyReference.cache
+E:\laos_tranlate\laos_project\obj\Debug\laos_project.dll
+E:\laos_tranlate\laos_project\obj\Debug\laos_project.pdb

@@ -16,12 +16,11 @@ namespace laos_project.fn_class
         private static string []x4 = new string[7];
         private static string []x5 = new string[4];
         private static string []x6 = new string[3];
-        private static string []x7 = new string[3];
+        private static string []x7 = new string[4];
         private static string []x8 = new string[8];
         private static string []x9 = new string[6];
         private static string []x10 = new string[3];
-
-
+        //check cahr
         public static bool check_char(string data)
         {
             setx();
@@ -32,6 +31,7 @@ namespace laos_project.fn_class
             }
                 return ret;
         }
+        //check ສຮະ
         public static bool check_vowel(string data)
         {
             setx0();
@@ -54,6 +54,18 @@ namespace laos_project.fn_class
             for (int i = 0; i < x7.Length; i++)
             {
                 if (data.Equals(x7[i])) ret = true;
+            }
+            return ret;
+        }
+
+        //check tone 
+        public static bool check_voweltone(string data)
+        {
+            setx5();
+            bool ret = false;
+            for (int i = 0; i < x5.Length; i++)
+            {
+                if (data.Equals(x5[i])) ret = true;
             }
             return ret;
         }
@@ -135,12 +147,14 @@ namespace laos_project.fn_class
             x6[0] = "ວ";
             x6[1] = "ອ";
             x6[2] = "ຽ";
+            
         }
         public static void setx7()
         {
             x7[0] = "ະ";
             x7[1] = "າ";
             x7[2] = "ຳ";
+            x7[3] = "ຽ";
         }
         public static void setx8()
         {

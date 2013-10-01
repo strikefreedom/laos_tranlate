@@ -30,7 +30,10 @@ namespace laos_project
         {
             output.InnerText = "";
             //ArrayList word = fn_class.cutword.main(input.InnerText);
-            output.InnerText = fn_class.main_fn.main_fnc(input.InnerText);
+            if (input.InnerText != "")
+            {
+                output.InnerText = fn_class.main_fn.main_fnc(input.InnerText);
+            }
 
         }
         
