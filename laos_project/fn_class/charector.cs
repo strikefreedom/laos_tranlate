@@ -21,6 +21,42 @@ namespace laos_project.fn_class
         private static string []x9 = new string[6];
         private static string []x10 = new string[3];
 
+
+        public static bool check_char(string data)
+        {
+            setx();
+            bool ret = false;
+            for (int i=0; i < x.Length; i++)
+            {
+                if (data.Equals(x[i])) ret = true;
+            }
+                return ret;
+        }
+        public static bool check_vowel(string data)
+        {
+            setx0();
+            setx3();
+            setx4();
+            setx7();
+            bool ret = false;
+            for (int i = 0; i < x0.Length; i++)
+            {
+                if (data.Equals(x0[i])) ret = true;
+            }
+            for (int i = 0; i < x3.Length; i++)
+            {
+                if (data.Equals(x3[i])) ret = true;
+            }
+            for (int i = 0; i < x4.Length; i++)
+            {
+                if (data.Equals(x4[i])) ret = true;
+            }
+            for (int i = 0; i < x7.Length; i++)
+            {
+                if (data.Equals(x7[i])) ret = true;
+            }
+            return ret;
+        }
         public static void setx0()
         {
             x0[0]="ເ";

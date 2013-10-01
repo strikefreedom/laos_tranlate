@@ -106,6 +106,7 @@
     </Compile>
     <Compile Include="fn_class\charector.cs" />
     <Compile Include="fn_class\cutword.cs" />
+    <Compile Include="fn_class\main_fn.cs" />
     <Compile Include="home.Master.cs">
       <DependentUpon>home.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

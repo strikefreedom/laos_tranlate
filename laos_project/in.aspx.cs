@@ -28,12 +28,10 @@ namespace laos_project
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            output.InnerText = "";
+            //ArrayList word = fn_class.cutword.main(input.InnerText);
+            output.InnerText = fn_class.main_fn.main_fnc(input.InnerText);
 
-            ArrayList word = fn_class.cutword.main(input.InnerText);
-            //st_out = "";
-            //output.InnerText = "";
-            //check1();
-            //output.InnerText = st_out;
         }
         
 
